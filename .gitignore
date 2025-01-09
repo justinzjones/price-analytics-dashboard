@@ -35,4 +35,8 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw? 
+*.sw?
+
+# Large data files
+src/data/AS2023.csv
+src/data/AS2023_subset.json 
