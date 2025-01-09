@@ -1,6 +1,5 @@
 import { Sidebar } from './Sidebar'
 import { DashboardHeader } from './DashboardHeader'
-import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 interface LayoutProps {
@@ -10,7 +9,6 @@ interface LayoutProps {
 }
 
 export function Layout({ children, isAlternativeDesign, onDesignToggle }: LayoutProps) {
-  const [selectedRegion, setSelectedRegion] = useState('N.East - Florida')
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -47,9 +45,7 @@ export function Layout({ children, isAlternativeDesign, onDesignToggle }: Layout
       <main className={`flex-1 overflow-y-auto ${isAlternativeDesign ? 'bg-white' : 'bg-gray-50'}`}>
         <div className="px-8">
           <DashboardHeader
-            selectedRegion={selectedRegion}
             selectedView={getCurrentView()}
-            onRegionChange={setSelectedRegion}
             onViewChange={handleViewChange}
           />
         </div>

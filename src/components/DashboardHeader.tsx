@@ -1,4 +1,4 @@
-import { ChevronDown, LayoutDashboard, BarChart2, LineChart } from 'lucide-react'
+import { LayoutDashboard, BarChart2, LineChart } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 interface DashboardHeaderProps {

@@ -19,7 +19,12 @@ export function ForwardLookingChart() {
             <YAxis />
             <Tooltip 
               labelFormatter={(value) => new Date(value).toLocaleDateString()}
-              formatter={(value) => value ? [`$${value.toFixed(2)}`, 'Price'] : ['-', 'Price']}
+              formatter={(value) => {
+                if (typeof value === 'number') {
+                  return `${value.toFixed(1)}%`
+                }
+                return `${value}%`
+              }}
             />
             <Legend />
             <Line 
