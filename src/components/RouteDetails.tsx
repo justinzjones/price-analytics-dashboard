@@ -3,12 +3,34 @@ import { Card } from './ui/card'
 import { ArrowLeft } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
+interface RouteData {
+  route: string
+  fullRoute: string
+  total: number
+  undercut: number
+  match: number
+  overpriced: number
+  na: number
+}
+
+const routeDataList: RouteData[] = [
+  { 
+    route: 'PHLDFW', 
+    fullRoute: 'Philadelphia (PHL) → Dallas (DFW)',
+    total: 100, 
+    undercut: 94, 
+    match: 3, 
+    overpriced: 3, 
+    na: 0 
+  }
+  // Add more route data as needed
+]
+
 export function RouteDetails() {
   const { routeId } = useParams()
   const navigate = useNavigate()
 
-  // Find the route data
-  const routeData = routeData.find(r => r.route === routeId)
+  const routeData = routeDataList.find((r: RouteData) => r.route === routeId)
 
   if (!routeData) {
     return <div>Route not found</div>

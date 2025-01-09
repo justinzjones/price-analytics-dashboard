@@ -1,6 +1,6 @@
 import { Card } from './ui/card'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Calendar, ChevronRight } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 

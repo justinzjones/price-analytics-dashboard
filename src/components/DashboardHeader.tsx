@@ -2,19 +2,9 @@ import { ChevronDown, LayoutDashboard, BarChart2, LineChart } from 'lucide-react
 import { useNavigate } from 'react-router-dom'
 
 interface DashboardHeaderProps {
-  selectedRegion: string
   selectedView: string
-  onRegionChange: (region: string) => void
   onViewChange: (view: string) => void
 }
-
-const regions = [
-  'N.East - Florida',
-  'West Coast',
-  'Central',
-  'Southeast',
-  'International'
-]
 
 const views = [
   { name: 'Market Overview', icon: LayoutDashboard, path: '/analytics' },
@@ -23,9 +13,7 @@ const views = [
 ]
 
 export function DashboardHeader({
-  selectedRegion,
   selectedView,
-  onRegionChange,
   onViewChange
 }: DashboardHeaderProps) {
   const navigate = useNavigate()
@@ -41,14 +29,6 @@ export function DashboardHeader({
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <h1 className="text-2xl font-bold text-gray-900">Market Price Position</h1>
-            <div className="inline-block relative text-left">
-              <button 
-                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-md border border-gray-300 hover:bg-gray-50"
-              >
-                {selectedRegion}
-                <ChevronDown className="ml-2 w-4 h-4" />
-              </button>
-            </div>
           </div>
           
           <div className="flex items-center space-x-4">

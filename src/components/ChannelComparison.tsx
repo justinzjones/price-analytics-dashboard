@@ -15,7 +15,12 @@ export function ChannelComparison() {
             <XAxis dataKey="channel" />
             <YAxis />
             <Tooltip 
-              formatter={(value) => [`$${value.toFixed(2)}`, 'Price']}
+              formatter={(value) => {
+                if (typeof value === 'number') {
+                  return `${value.toFixed(1)}%`
+                }
+                return `${value}%`
+              }}
             />
             <Legend />
             <Bar 

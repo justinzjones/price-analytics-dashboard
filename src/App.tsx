@@ -7,10 +7,9 @@ import { useState } from 'react'
 
 function App() {
   const [isAlternativeDesign, setIsAlternativeDesign] = useState(true)
-  const basePath = import.meta.env.BASE_URL
 
   return (
-    <Router basename={basePath}>
+    <Router basename="/price-analytics-dashboard">
       <Layout isAlternativeDesign={isAlternativeDesign} onDesignToggle={() => setIsAlternativeDesign(!isAlternativeDesign)}>
         <Routes>
           <Route path="/" element={<Navigate to="/analytics" replace />} />
