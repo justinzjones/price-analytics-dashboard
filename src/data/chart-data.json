@@ -1,0 +1,27 @@
+{
+  "priceEvolution": [
+    { "date": "2024-12-01", "price": 3800, "avgPrice": 3200 },
+    { "date": "2024-12-02", "price": 3200, "avgPrice": 3250 },
+    { "date": "2024-12-03", "price": 3800, "avgPrice": 3300 },
+    { "date": "2024-12-04", "price": 3100, "avgPrice": 3280 },
+    { "date": "2024-12-05", "price": 3900, "avgPrice": 3350 },
+    { "date": "2024-12-06", "price": 3400, "avgPrice": 3380 },
+    { "date": "2024-12-07", "price": 3600, "avgPrice": 3400 }
+  ],
+  "forwardLooking": [
+    { "date": "2024-12-13", "price": 3500, "forecast": 3500 },
+    { "date": "2024-12-14", "price": null, "forecast": 3600 },
+    { "date": "2024-12-15", "price": null, "forecast": 3800 },
+    { "date": "2024-12-16", "price": null, "forecast": 3700 },
+    { "date": "2024-12-17", "price": null, "forecast": 3900 },
+    { "date": "2024-12-18", "price": null, "forecast": 3800 },
+    { "date": "2024-12-19", "price": null, "forecast": 4000 }
+  ],
+  "channelComparison": [
+    { "channel": "Expedia", "direct": 3500, "competitor": 3600 },
+    { "channel": "Direct", "direct": 3200, "competitor": 3400 },
+    { "channel": "Booking", "direct": 3800, "competitor": 3700 },
+    { "channel": "Kayak", "direct": 3300, "competitor": 3500 },
+    { "channel": "Others", "direct": 3600, "competitor": 3800 }
+  ]
+} 
